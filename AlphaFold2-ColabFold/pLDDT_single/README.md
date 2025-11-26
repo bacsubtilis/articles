@@ -3,7 +3,7 @@ This is a simple tool that allows you to visualize the pLDDT scores for a single
 
 ### Usage
 
-To use this script, you will need a the `.pdb` and `.json` files of a protein structure model predicted by ColabFold.
+To use this script, you will need the `.pdb` and `.json` files of a protein structure model predicted by ColabFold.
 
 ```bash
 python pLDDT_single_example.py <path_to_your_model_pdb_file> <path_to_your_model_json_file>  --model_name "Protein X" --output "Protein_X"
