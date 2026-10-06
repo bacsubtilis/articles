@@ -1,0 +1,70 @@
+{
+    "tables": {
+        "table": {
+            "columns": {
+                "DXXNKBMD": {
+                    "sdtype": "numerical"
+                },
+                "RIDAGEYR": {
+                    "sdtype": "numerical"
+                },
+                "INDFMPIR": {
+                    "sdtype": "numerical"
+                },
+                "BMXBMI": {
+                    "sdtype": "numerical"
+                },
+                "LBXSCK": {
+                    "sdtype": "numerical"
+                },
+                "LBDSCHSI": {
+                    "sdtype": "numerical"
+                },
+                "LBXSAPSI": {
+                    "sdtype": "numerical"
+                },
+                "LBXSUA": {
+                    "sdtype": "numerical"
+                },
+                "LBDSTPSI": {
+                    "sdtype": "numerical"
+                },
+                "LBDSGBSI": {
+                    "sdtype": "numerical"
+                },
+                "LBXSOSSI": {
+                    "sdtype": "numerical"
+                },
+                "LBXGH": {
+                    "sdtype": "numerical"
+                },
+                "LBXMCVSI": {
+                    "sdtype": "numerical"
+                },
+                "LBXRDW": {
+                    "sdtype": "numerical"
+                },
+                "LBXNEPCT": {
+                    "sdtype": "numerical"
+                },
+                "LBXMOPCT": {
+                    "sdtype": "numerical"
+                },
+                "RIAGENDR": {
+                    "sdtype": "categorical"
+                },
+                "OSQ150": {
+                    "sdtype": "categorical"
+                },
+                "DIQ010": {
+                    "sdtype": "categorical"
+                },
+                "OSQ060": {
+                    "sdtype": "categorical"
+                }
+            }
+        }
+    },
+    "relationships": [],
+    "METADATA_SPEC_VERSION": "V1"
+}

@@ -1,0 +1,109 @@
+arm,eval,feature,mean_abs_shap
+R (real),Internal test,Gender,0.6076410041566788
+R (real),Internal test,BMI,0.48542779452213514
+R (real),Internal test,Age,0.43983967339995256
+R (real),Internal test,Alkaline phosphatase (ALP),0.14053420908931524
+R (real),Internal test,Creatine phosphokinase (CPK),0.12433377119367853
+R (real),Internal test,Parental osteoporosis / fracture (OSQ150),0.11315959146312822
+R (real),Internal test,Total protein,0.09546583001130377
+R (real),Internal test,Income-to-poverty ratio,0.08467860009779139
+R (real),Internal test,Osmolality,0.08035415599373431
+R (real),Internal test,Total cholesterol,0.06055864708515909
+R (real),Internal test,Diabetes,0.04477009085897371
+R (real),Internal test,Mean cell volume,0.03987936520947368
+R (real),Internal test,Uric acid,0.03961633280821641
+R (real),Internal test,Neutrophil percent,0.03949700796310829
+R (real),Internal test,Glycohemoglobin,0.02821882116504199
+R (real),Internal test,Monocyte percent,0.027112661498124666
+R (real),Internal test,Globulin,0.022908111136702908
+R (real),Internal test,Red cell distribution width,0.0071143903831670345
+R (real),External 2013–14,Gender,0.6076410041566788
+R (real),External 2013–14,BMI,0.516867384250507
+R (real),External 2013–14,Age,0.4528381595119563
+R (real),External 2013–14,Alkaline phosphatase (ALP),0.17288886275585702
+R (real),External 2013–14,Creatine phosphokinase (CPK),0.1162739193040006
+R (real),External 2013–14,Parental osteoporosis / fracture (OSQ150),0.11072364659968524
+R (real),External 2013–14,Total protein,0.10691027256706327
+R (real),External 2013–14,Income-to-poverty ratio,0.08651510230184083
+R (real),External 2013–14,Osmolality,0.07590081398684355
+R (real),External 2013–14,Total cholesterol,0.05885120703760225
+R (real),External 2013–14,Diabetes,0.04276331247067403
+R (real),External 2013–14,Mean cell volume,0.04177262800652555
+R (real),External 2013–14,Neutrophil percent,0.038988384631034066
+R (real),External 2013–14,Uric acid,0.037302950196966354
+R (real),External 2013–14,Globulin,0.028861875654048564
+R (real),External 2013–14,Monocyte percent,0.027861270405885093
+R (real),External 2013–14,Glycohemoglobin,0.02741896860463802
+R (real),External 2013–14,Red cell distribution width,0.006726854555338898
+S (synthetic),Internal test,Gender,0.5297456687268429
+S (synthetic),Internal test,Age,0.31255681124929363
+S (synthetic),Internal test,BMI,0.25329645890755476
+S (synthetic),Internal test,Uric acid,0.23258017412646625
+S (synthetic),Internal test,Mean cell volume,0.19668383895023842
+S (synthetic),Internal test,Osmolality,0.14360012605834138
+S (synthetic),Internal test,Creatine phosphokinase (CPK),0.13647780610900653
+S (synthetic),Internal test,Neutrophil percent,0.12631720928504736
+S (synthetic),Internal test,Total protein,0.12210996318194572
+S (synthetic),Internal test,Diabetes,0.11607452034633896
+S (synthetic),Internal test,Glycohemoglobin,0.10350274570823625
+S (synthetic),Internal test,Parental osteoporosis / fracture (OSQ150),0.10149201538525732
+S (synthetic),Internal test,Total cholesterol,0.03857684160015056
+S (synthetic),Internal test,Red cell distribution width,0.03515082343754817
+S (synthetic),Internal test,Alkaline phosphatase (ALP),0.02414998203609032
+S (synthetic),Internal test,Monocyte percent,0.020964996724387126
+S (synthetic),Internal test,Globulin,0.018569150141398042
+S (synthetic),Internal test,Income-to-poverty ratio,0.01678770028950529
+S (synthetic),External 2013–14,Gender,0.5232569940825081
+S (synthetic),External 2013–14,Age,0.32585241507069435
+S (synthetic),External 2013–14,BMI,0.2671340476426189
+S (synthetic),External 2013–14,Uric acid,0.2202922393583014
+S (synthetic),External 2013–14,Mean cell volume,0.20821587045004486
+S (synthetic),External 2013–14,Total protein,0.1382755273621508
+S (synthetic),External 2013–14,Osmolality,0.12995300953438646
+S (synthetic),External 2013–14,Neutrophil percent,0.12170391300673665
+S (synthetic),External 2013–14,Creatine phosphokinase (CPK),0.11962651728254858
+S (synthetic),External 2013–14,Diabetes,0.11054950963165895
+S (synthetic),External 2013–14,Glycohemoglobin,0.10345460016484867
+S (synthetic),External 2013–14,Parental osteoporosis / fracture (OSQ150),0.10049536606192173
+S (synthetic),External 2013–14,Total cholesterol,0.03815653312776043
+S (synthetic),External 2013–14,Red cell distribution width,0.03293125946695498
+S (synthetic),External 2013–14,Alkaline phosphatase (ALP),0.028253353385745666
+S (synthetic),External 2013–14,Globulin,0.025249513545555203
+S (synthetic),External 2013–14,Monocyte percent,0.021421340583016174
+S (synthetic),External 2013–14,Income-to-poverty ratio,0.017095972262765755
+R+S (augmented),Internal test,Gender,0.51805901067856
+R+S (augmented),Internal test,Age,0.39001454333102753
+R+S (augmented),Internal test,BMI,0.32121245353851796
+R+S (augmented),Internal test,Diabetes,0.1614464252454154
+R+S (augmented),Internal test,Uric acid,0.152683897690009
+R+S (augmented),Internal test,Creatine phosphokinase (CPK),0.13505309997926426
+R+S (augmented),Internal test,Parental osteoporosis / fracture (OSQ150),0.12998037101805907
+R+S (augmented),Internal test,Mean cell volume,0.09756212042319734
+R+S (augmented),Internal test,Glycohemoglobin,0.07752361595009528
+R+S (augmented),Internal test,Alkaline phosphatase (ALP),0.06187878226103176
+R+S (augmented),Internal test,Neutrophil percent,0.06128885586601884
+R+S (augmented),Internal test,Globulin,0.05265728793404539
+R+S (augmented),Internal test,Osmolality,0.05117746516078543
+R+S (augmented),Internal test,Income-to-poverty ratio,0.05073602420287587
+R+S (augmented),Internal test,Red cell distribution width,0.04319754208091277
+R+S (augmented),Internal test,Total protein,0.029579774082725798
+R+S (augmented),Internal test,Total cholesterol,0.01329628108546742
+R+S (augmented),Internal test,Monocyte percent,0.002477428653454803
+R+S (augmented),External 2013–14,Gender,0.5171430153573249
+R+S (augmented),External 2013–14,Age,0.403321266940254
+R+S (augmented),External 2013–14,BMI,0.34437976482035376
+R+S (augmented),External 2013–14,Diabetes,0.15666338610009364
+R+S (augmented),External 2013–14,Uric acid,0.14381667792727126
+R+S (augmented),External 2013–14,Parental osteoporosis / fracture (OSQ150),0.1277539897250445
+R+S (augmented),External 2013–14,Creatine phosphokinase (CPK),0.12290397197538108
+R+S (augmented),External 2013–14,Mean cell volume,0.1018153807165727
+R+S (augmented),External 2013–14,Glycohemoglobin,0.07723313382856674
+R+S (augmented),External 2013–14,Globulin,0.07192310272974316
+R+S (augmented),External 2013–14,Alkaline phosphatase (ALP),0.06844994759405758
+R+S (augmented),External 2013–14,Neutrophil percent,0.05930694472775891
+R+S (augmented),External 2013–14,Income-to-poverty ratio,0.05167279568967523
+R+S (augmented),External 2013–14,Osmolality,0.04979421190085626
+R+S (augmented),External 2013–14,Red cell distribution width,0.04095330429671467
+R+S (augmented),External 2013–14,Total protein,0.03369853709836886
+R+S (augmented),External 2013–14,Total cholesterol,0.013140311433726784
+R+S (augmented),External 2013–14,Monocyte percent,0.002532271202227805
