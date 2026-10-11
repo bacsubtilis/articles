@@ -2,7 +2,7 @@
 
 Short experiment accompanying my LinkedIn article: **[TODO: LinkedIn article URL]**
 
-Using NHANES cohorts (development 2017–2020, external validation 2013–2014), we predict low bone mineral density with the feature set from Xu et al. (2024). CTGAN generates synthetic training data from the real train fold only. We then compare three training arms—**real (R)**, **synthetic (S)**, and **augmented (R+S)**—on real internal and external test sets, and use SHAP on logistic regression to check whether feature importance stays consistent across arms.
+Using NHANES cohorts (development 2017–2020, external validation 2013–2014), we predict low bone mineral density in an experiment whose clinical setting and feature palette are **inspired by** Xu et al. (2024)—not a strict replication. TARGET is defined from femoral-neck T-score only; participants with self-reported osteoporosis (`OSQ060 = Yes`) but normal BMD are discarded, and `OSQ060` is never used as a feature. CTGAN generates synthetic training data from the real train fold only. We then compare three training arms—**real (R)**, **synthetic (S)**, and **augmented (R+S)**—on real internal and external test sets, and use SHAP on logistic regression to check whether feature importance stays consistent across arms.
 
 ## Pipeline
 

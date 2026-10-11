@@ -58,9 +58,6 @@
                 },
                 "DIQ010": {
                     "sdtype": "categorical"
-                },
-                "OSQ060": {
-                    "sdtype": "categorical"
                 }
             }
         }

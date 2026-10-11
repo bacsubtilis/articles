@@ -38,7 +38,10 @@ TSCORE_REF = 0.858
 TSCORE_SCALE = 0.120
 TSCORE_CUTOFF = -0.99
 
-CAT_ALL = ["RIAGENDR", "DIQ010", "OSQ060", "OSQ150"]
+# OSQ060 is gathered only to identify and discard self-report/BMD-discordant
+# rows; it is never used for TARGET and never enters the predictor matrix.
+CAT_ALL = ["RIAGENDR", "DIQ010", "OSQ150"]
+OSQ060_COL = "OSQ060"
 VALID_CAT_CODES = [1, 2]
 
 NUM_FEATURES = [
@@ -58,7 +61,6 @@ NUM_FEATURES = [
     "LBXNEPCT",
     "LBXMOPCT",
 ]
-# OSQ060 is used for TARGET but excluded from predictors.
 CAT_FEATURES = ["RIAGENDR", "OSQ150", "DIQ010"]
 MODEL_FEATURES = NUM_FEATURES + CAT_FEATURES
 
@@ -223,15 +225,17 @@ def finalize_external_cohort(
     Differs from ``prepare_external`` (notebook 2): survey-code cleaning is limited
     to OSQ/DIQ, the T-score is not rounded before TARGET, and ``dropna()`` removes
     any row with a missing value in any column, not just the model features.
+    OSQ060 is used only to drop self-report/BMD-discordant rows, then discarded.
     """
     out = df.copy()
-    for col in ("OSQ060", "OSQ150", "DIQ010"):
+    for col in (OSQ060_COL, "OSQ150", "DIQ010"):
         if col in out.columns:
             out.loc[~out[col].isin(VALID_CAT_CODES), col] = np.nan
     out["TSCORE"] = (out["DXXNKBMD"] - TSCORE_REF) / TSCORE_SCALE
-    out[LABEL_COL] = (
-        (out["TSCORE"] <= TSCORE_CUTOFF) | (out["OSQ060"] == 1)
-    ).astype(int)
+    out[LABEL_COL] = (out["TSCORE"] <= TSCORE_CUTOFF).astype(int)
+    out = discard_osq060_bmd_discordant(out)
+    if OSQ060_COL in out.columns:
+        out = out.drop(columns=[OSQ060_COL])
     out = out.loc[out["RIDAGEYR"] >= min_age].copy()
     return out.dropna().reset_index(drop=True)
 
@@ -291,23 +295,53 @@ def ensure_dirs() -> None:
 
 
 def apply_tscore_and_target(df: pd.DataFrame) -> pd.DataFrame:
-    """Compute T-score and binary TARGET using the article rule."""
+    """Compute T-score and binary TARGET from femoral-neck BMD only (WHO rule)."""
     out = df.copy()
     out["TSCORE"] = (out["DXXNKBMD"] - TSCORE_REF) / TSCORE_SCALE
     out["TSCORE_ROUNDED"] = out["TSCORE"].round(3)
-    out[LABEL_COL] = (
-        (out["TSCORE_ROUNDED"] <= TSCORE_CUTOFF) | (out["OSQ060"] == 1)
-    ).astype(int)
+    out[LABEL_COL] = (out["TSCORE_ROUNDED"] <= TSCORE_CUTOFF).astype(int)
     return out
+
+
+def discard_osq060_bmd_discordant(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Drop participants with OSQ060 = Yes but non-osteoporotic / non-osteopenic BMD.
+
+    Self-report is not treated as a physiological ground truth for low BMD.
+    Rows without OSQ060 are retained; only the discordant Yes + normal T-score
+    combination is removed.
+    """
+    out = df.copy()
+    if OSQ060_COL not in out.columns:
+        return out.reset_index(drop=True)
+
+    if "TSCORE_ROUNDED" in out.columns:
+        tscore = out["TSCORE_ROUNDED"]
+    elif "TSCORE" in out.columns:
+        tscore = out["TSCORE"]
+    else:
+        tscore = (out["DXXNKBMD"] - TSCORE_REF) / TSCORE_SCALE
+
+    discordant = (out[OSQ060_COL] == 1) & (tscore > TSCORE_CUTOFF)
+    return out.loc[~discordant].copy().reset_index(drop=True)
+
+
+def drop_osq060(df: pd.DataFrame) -> pd.DataFrame:
+    """Remove OSQ060 so it cannot leak into modeling or generation."""
+    if OSQ060_COL not in df.columns:
+        return df
+    return df.drop(columns=[OSQ060_COL]).copy()
 
 
 def clean_categorical_codes(df: pd.DataFrame) -> pd.DataFrame:
     """Set invalid NHANES survey codes to NA, then keep rows with valid 1/2 codes."""
     out = df.copy()
-    for col in CAT_ALL:
-        if col in out.columns:
-            out.loc[~out[col].isin(VALID_CAT_CODES), col] = np.nan
-    valid_mask = out[CAT_ALL].notna().all(axis=1)
+    cols = [c for c in CAT_ALL if c in out.columns]
+    for col in cols:
+        out.loc[~out[col].isin(VALID_CAT_CODES), col] = np.nan
+    if OSQ060_COL in out.columns:
+        out.loc[~out[OSQ060_COL].isin(VALID_CAT_CODES), OSQ060_COL] = np.nan
+    valid_mask = out[cols].notna().all(axis=1) if cols else pd.Series(True, index=out.index)
     return out.loc[valid_mask].copy().reset_index(drop=True)
 
 
@@ -319,18 +353,22 @@ def to_complete_cases(df: pd.DataFrame) -> pd.DataFrame:
 def prepare_development_raw(df: pd.DataFrame) -> pd.DataFrame:
     out = clean_categorical_codes(df)
     out = apply_tscore_and_target(out)
+    out = discard_osq060_bmd_discordant(out)
+    out = drop_osq060(out)
     return to_complete_cases(out)
 
 
 def prepare_external(df: pd.DataFrame) -> pd.DataFrame:
     out = clean_categorical_codes(df)
-    if "TSCORE" not in out.columns or LABEL_COL not in out.columns:
-        out = apply_tscore_and_target(out)
+    # Recompute TARGET from BMD even if a prior TARGET column exists (may include OSQ060).
+    out = apply_tscore_and_target(out)
+    out = discard_osq060_bmd_discordant(out)
+    out = drop_osq060(out)
     return to_complete_cases(out)
 
 
 def add_labels_to_synthetic(df: pd.DataFrame) -> pd.DataFrame:
-    """Recompute TARGET on generated rows from DXXNKBMD and OSQ060."""
+    """Recompute TARGET on generated rows from femoral-neck BMD / T-score only."""
     out = df.copy()
     for col in CAT_ALL:
         if col in out.columns:
@@ -338,6 +376,7 @@ def add_labels_to_synthetic(df: pd.DataFrame) -> pd.DataFrame:
             out.loc[~out[col].isin(VALID_CAT_CODES), col] = np.nan
             out[col] = out[col].round().astype("Int64")
     out = apply_tscore_and_target(out)
+    out = drop_osq060(out)
     return out
 
 

@@ -1,37 +1,37 @@
 feature,R (real),S (synthetic),R+S (augmented),eval
-Gender,1,1,1,Internal test
-BMI,2,3,3,Internal test
-Age,3,2,2,Internal test
-Alkaline phosphatase (ALP),4,15,10,Internal test
-Creatine phosphokinase (CPK),5,7,6,Internal test
-Parental osteoporosis / fracture (OSQ150),6,12,7,Internal test
-Total protein,7,9,16,Internal test
-Income-to-poverty ratio,8,18,14,Internal test
-Osmolality,9,6,13,Internal test
-Total cholesterol,10,13,17,Internal test
-Diabetes,11,10,4,Internal test
-Mean cell volume,12,5,8,Internal test
-Uric acid,13,4,5,Internal test
-Neutrophil percent,14,8,11,Internal test
-Glycohemoglobin,15,11,9,Internal test
-Monocyte percent,16,16,18,Internal test
-Globulin,17,17,12,Internal test
-Red cell distribution width,18,14,15,Internal test
-Gender,1,1,1,External 2013–14
-BMI,2,3,3,External 2013–14
-Age,3,2,2,External 2013–14
-Alkaline phosphatase (ALP),4,15,11,External 2013–14
-Creatine phosphokinase (CPK),5,9,7,External 2013–14
-Parental osteoporosis / fracture (OSQ150),6,12,6,External 2013–14
-Total protein,7,6,16,External 2013–14
-Income-to-poverty ratio,8,18,13,External 2013–14
-Osmolality,9,7,14,External 2013–14
-Total cholesterol,10,13,17,External 2013–14
-Diabetes,11,10,4,External 2013–14
-Mean cell volume,12,5,8,External 2013–14
-Neutrophil percent,13,8,12,External 2013–14
-Uric acid,14,4,5,External 2013–14
-Globulin,15,16,10,External 2013–14
-Monocyte percent,16,17,18,External 2013–14
-Glycohemoglobin,17,11,9,External 2013–14
-Red cell distribution width,18,14,15,External 2013–14
+Gender,1,2,1,Internal test
+BMI,2,1,2,Internal test
+Age,3,5,3,Internal test
+Alkaline phosphatase (ALP),4,4,7,Internal test
+Creatine phosphokinase (CPK),5,3,6,Internal test
+Total protein,6,7,4,Internal test
+Neutrophil percent,7,13,10,Internal test
+Uric acid,8,6,8,Internal test
+Income-to-poverty ratio,9,11,13,Internal test
+Total cholesterol,10,17,14,Internal test
+Glycohemoglobin,11,14,9,Internal test
+Red cell distribution width,12,15,16,Internal test
+Parental osteoporosis / fracture (OSQ150),13,9,5,Internal test
+Osmolality,14,10,18,Internal test
+Mean cell volume,15,12,11,Internal test
+Monocyte percent,16,16,12,Internal test
+Globulin,17,18,17,Internal test
+Diabetes,18,8,15,Internal test
+Gender,1,2,1,External 2013–14
+BMI,2,1,2,External 2013–14
+Age,3,5,3,External 2013–14
+Alkaline phosphatase (ALP),4,4,5,External 2013–14
+Creatine phosphokinase (CPK),5,3,7,External 2013–14
+Total protein,6,6,4,External 2013–14
+Neutrophil percent,7,13,10,External 2013–14
+Income-to-poverty ratio,8,11,13,External 2013–14
+Uric acid,9,7,9,External 2013–14
+Total cholesterol,10,18,14,External 2013–14
+Glycohemoglobin,11,14,8,External 2013–14
+Red cell distribution width,12,15,16,External 2013–14
+Parental osteoporosis / fracture (OSQ150),13,9,6,External 2013–14
+Osmolality,14,10,18,External 2013–14
+Mean cell volume,15,12,11,External 2013–14
+Monocyte percent,16,16,12,External 2013–14
+Globulin,17,17,17,External 2013–14
+Diabetes,18,8,15,External 2013–14

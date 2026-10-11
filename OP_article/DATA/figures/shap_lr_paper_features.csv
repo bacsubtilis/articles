@@ -1,37 +1,37 @@
 arm,eval,paper_feature,rank,mean_abs_shap
-R (real),Internal test,Age,3,0.43983967339995256
-R (real),Internal test,BMI,2,0.48542779452213514
-R (real),Internal test,Gender,1,0.6076410041566788
-R (real),Internal test,Creatine phosphokinase (CPK),5,0.12433377119367853
-R (real),Internal test,Total cholesterol,10,0.06055864708515909
-R (real),Internal test,Alkaline phosphatase (ALP),4,0.14053420908931524
-R (real),External 2013–14,Age,3,0.4528381595119563
-R (real),External 2013–14,BMI,2,0.516867384250507
-R (real),External 2013–14,Gender,1,0.6076410041566788
-R (real),External 2013–14,Creatine phosphokinase (CPK),5,0.1162739193040006
-R (real),External 2013–14,Total cholesterol,10,0.05885120703760225
-R (real),External 2013–14,Alkaline phosphatase (ALP),4,0.17288886275585702
-S (synthetic),Internal test,Age,2,0.31255681124929363
-S (synthetic),Internal test,BMI,3,0.25329645890755476
-S (synthetic),Internal test,Gender,1,0.5297456687268429
-S (synthetic),Internal test,Creatine phosphokinase (CPK),7,0.13647780610900653
-S (synthetic),Internal test,Total cholesterol,13,0.03857684160015056
-S (synthetic),Internal test,Alkaline phosphatase (ALP),15,0.02414998203609032
-S (synthetic),External 2013–14,Age,2,0.32585241507069435
-S (synthetic),External 2013–14,BMI,3,0.2671340476426189
-S (synthetic),External 2013–14,Gender,1,0.5232569940825081
-S (synthetic),External 2013–14,Creatine phosphokinase (CPK),9,0.11962651728254858
-S (synthetic),External 2013–14,Total cholesterol,13,0.03815653312776043
-S (synthetic),External 2013–14,Alkaline phosphatase (ALP),15,0.028253353385745666
-R+S (augmented),Internal test,Age,2,0.39001454333102753
-R+S (augmented),Internal test,BMI,3,0.32121245353851796
-R+S (augmented),Internal test,Gender,1,0.51805901067856
-R+S (augmented),Internal test,Creatine phosphokinase (CPK),6,0.13505309997926426
-R+S (augmented),Internal test,Total cholesterol,17,0.01329628108546742
-R+S (augmented),Internal test,Alkaline phosphatase (ALP),10,0.06187878226103176
-R+S (augmented),External 2013–14,Age,2,0.403321266940254
-R+S (augmented),External 2013–14,BMI,3,0.34437976482035376
-R+S (augmented),External 2013–14,Gender,1,0.5171430153573249
-R+S (augmented),External 2013–14,Creatine phosphokinase (CPK),7,0.12290397197538108
-R+S (augmented),External 2013–14,Total cholesterol,17,0.013140311433726784
-R+S (augmented),External 2013–14,Alkaline phosphatase (ALP),11,0.06844994759405758
+R (real),Internal test,Age,3,0.4498878663000673
+R (real),Internal test,BMI,2,0.5041666965361715
+R (real),Internal test,Gender,1,0.5599873427763596
+R (real),Internal test,Creatine phosphokinase (CPK),5,0.11833572866723704
+R (real),Internal test,Total cholesterol,10,0.06748682749423275
+R (real),Internal test,Alkaline phosphatase (ALP),4,0.12707871196009335
+R (real),External 2013–14,Age,3,0.4741857600530093
+R (real),External 2013–14,BMI,2,0.5199307030333546
+R (real),External 2013–14,Gender,1,0.5621471406554838
+R (real),External 2013–14,Creatine phosphokinase (CPK),5,0.11304370083348421
+R (real),External 2013–14,Total cholesterol,10,0.06633556648189647
+R (real),External 2013–14,Alkaline phosphatase (ALP),4,0.1478334396495967
+S (synthetic),Internal test,Age,5,0.19655936132170254
+S (synthetic),Internal test,BMI,1,0.41495869865222645
+S (synthetic),Internal test,Gender,2,0.38329655218393877
+S (synthetic),Internal test,Creatine phosphokinase (CPK),3,0.3304123667017244
+S (synthetic),Internal test,Total cholesterol,17,0.008215302434981456
+S (synthetic),Internal test,Alkaline phosphatase (ALP),4,0.22971005292837438
+S (synthetic),External 2013–14,Age,5,0.20825928968759067
+S (synthetic),External 2013–14,BMI,1,0.41790429856105654
+S (synthetic),External 2013–14,Gender,2,0.3832965521839389
+S (synthetic),External 2013–14,Creatine phosphokinase (CPK),3,0.31289667915822894
+S (synthetic),External 2013–14,Total cholesterol,18,0.008115832132143782
+S (synthetic),External 2013–14,Alkaline phosphatase (ALP),4,0.27279947426511897
+R+S (augmented),Internal test,Age,3,0.32280420697495293
+R+S (augmented),Internal test,BMI,2,0.4086864543359034
+R+S (augmented),Internal test,Gender,1,0.45370792390539105
+R+S (augmented),Internal test,Creatine phosphokinase (CPK),6,0.15825951181997722
+R+S (augmented),Internal test,Total cholesterol,14,0.047471234061253295
+R+S (augmented),Internal test,Alkaline phosphatase (ALP),7,0.15505350622605543
+R+S (augmented),External 2013–14,Age,3,0.34080343658851947
+R+S (augmented),External 2013–14,BMI,2,0.4176159604176109
+R+S (augmented),External 2013–14,Gender,1,0.4540566453330215
+R+S (augmented),External 2013–14,Creatine phosphokinase (CPK),7,0.14950146703603454
+R+S (augmented),External 2013–14,Total cholesterol,14,0.04648655648039621
+R+S (augmented),External 2013–14,Alkaline phosphatase (ALP),5,0.16937438149586564
